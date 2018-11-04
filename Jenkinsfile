@@ -1,5 +1,8 @@
 pipeline {
     agent any
+	parameters {
+		string(name: 'DEV_DEPLOY',defaultValue:'hello',description:'parameter 1')
+	}
     stages{
         stage('Build'){
             steps {
